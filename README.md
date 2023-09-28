@@ -25,7 +25,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
       - uses: TheModdersDen/cloudflare-pages-deploy-action@v1
         with:
           DEPLOY_HOOK_URL: ${{ secrets.DEPLOY_HOOK_URL }}
