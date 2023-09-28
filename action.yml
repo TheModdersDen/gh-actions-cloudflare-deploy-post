@@ -1,0 +1,18 @@
+name: 'Publish to Cloudflare Pages via POST'
+description: 'Publish to Cloudflare Pages via a POST request using a deploy hook, using the GitHub Pages environment variables'
+inputs:
+  url:
+    description: 'The URL of the deploy hook'
+    required: true
+    default: ${{ secrets.DEPLOY_HOOK_URL }}
+  shell:
+    description: 'The shell to use to run the command'
+    required: false
+    default: bash
+runs:
+  using: 'composite'
+  steps:
+    - name: 'Publish to Cloudflare Pages via POST'
+      shell: ${{ inputs.shell }}
+      run: |
+        curl -X POST ${{ inputs.url }}
