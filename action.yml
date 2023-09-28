@@ -1,5 +1,6 @@
 name: 'Publish to Cloudflare Pages via POST'
 description: 'Publish to Cloudflare Pages via a POST request using a deploy hook, using the GitHub Pages environment variables'
+author: 'TheModdersDen'
 inputs:
   url:
     description: 'The URL of the deploy hook'
@@ -9,6 +10,9 @@ inputs:
     description: 'The shell to use to run the command'
     required: false
     default: bash
+branding:
+  icon: 'upload-cloud'
+  color: 'yellow'
 runs:
   using: 'composite'
   steps:
