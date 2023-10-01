@@ -5,7 +5,7 @@ inputs:
   url:
     description: 'The URL of the deploy hook'
     required: true
-    default: ${{ secrets.CLOUDFLARE_POST_URL }}
+    default: CHANGEME
   shell:
     description: 'The shell to use to run the command'
     required: false
